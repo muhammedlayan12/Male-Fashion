@@ -5,12 +5,24 @@ import styles from "../styles/Products.module.css";
 import Image from "next/image";
 import json from "../json/products.json";
 
+// Adjusted Product interface
+interface Product {
+    name: string;
+    image: string;
+    price: number;
+    description: string;
+    rating: string; // Assuming this is a string that might include HTML for star ratings
+    new?: string; // Changed to string based on your JSON structure
+    hot?: string; // Changed to string based on your JSON structure
+    colors: string[]; // Assuming this is also part of your product structure
+}
+
 function Products() {
-    const [activeFilter, setActiveFilter] = useState('Best Sellers');
-    const [isFading, setIsFading] = useState(false);
-    const [isPopupVisible, setPopupVisible] = useState(false);
-    const [isOrderPopupVisible, setOrderPopupVisible] = useState(false); // State for order popup
-    const [selectedProduct, setSelectedProduct] = useState<any>(null);
+    const [activeFilter, setActiveFilter] = useState<string>('Best Sellers');
+    const [isFading, setIsFading] = useState<boolean>(false);
+    const [isPopupVisible, setPopupVisible] = useState<boolean>(false);
+    const [isOrderPopupVisible, setOrderPopupVisible] = useState<boolean>(false);
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Use the Product type
 
     const handleActiveFilter = (filter: string) => {
         if (filter !== activeFilter) {
@@ -22,7 +34,7 @@ function Products() {
         }
     };
 
-    const openPopup = (product: any) => {
+    const openPopup = (product: Product) => { // Use the Product type here
         setSelectedProduct(product);
         setPopupVisible(true);
     };
@@ -72,16 +84,16 @@ function Products() {
                     id='products'
                 >
                     {json
-                        .filter(product => {
+                        .filter((product: Product) => {
                             if (activeFilter === "Hot Sale") {
-                                return product.hot;
+                                return product.hot === "true"; // Adjusted to check for string
                             }
                             if (activeFilter === "New Arrival") {
-                                return product.new;
+                                return product.new === "true"; // Adjusted to check for string
                             }
                             return true;
                         })
-                        .map((product, index) => (
+                        .map((product: Product, index: number) => (
                             <div key={index} className={styles.product}>
                                 <Image 
                                     src={product.image} 
@@ -105,10 +117,10 @@ function Products() {
                                     </div>
                                     <div dangerouslySetInnerHTML={{ __html: product.rating }} />
                                     <p>${product.price}</p>
-                                    {product.new && (
+                                    {product.new === "true" && ( // Adjusted to check for string
                                         <span className={styles.new}>New</span>
                                     )}
-                                    {product.hot && (
+                                    {product.hot === "true" && ( // Adjusted to check for string
                                         <span className={styles.hot}>Hot</span>
                                     )}
                                 </div>
@@ -148,7 +160,7 @@ function Products() {
                     <section className={styles.orderPopup}>
                         <div className={styles.cut} onClick={closeOrderPopup}>&times;</div>
                         <div className={styles.content}>
-                            <h3>YOUR ORDER HAVE BEEN PLACED</h3>
+                            <h3>YOUR ORDER HAS BEEN PLACED</h3>
                             <p>Thank you for purchasing! Your order has been placed.</p>
                             <button onClick={closeOrderPopup}>Close</button>
                         </div>

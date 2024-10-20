@@ -48,15 +48,22 @@ function About() {
         const target = targetAttr ? +targetAttr : 0; // Safely get target value
         const isPercentage = targetAttr === '99';
         counter.innerHTML = isPercentage ? '0%' : '+0';
-
+    
         const updateCounter = () => {
           const current = +counter.innerHTML.replace(/[+%]/g, '') || 0; // Ensure current is a number
           const increment = target / 200;
-
+    
           if (current < target) {
             counter.innerHTML = isPercentage
               ? `${Math.ceil(current + increment)}%`
               : `+${Math.ceil(current + increment)}`;
+            setCounts(prevCounts => ({
+              ...prevCounts,
+              client: isPercentage ? Math.ceil(current + increment) : prevCounts.client, // Update only if it's the client count
+              categories: isPercentage ? prevCounts.categories : Math.ceil(current + increment), // Update accordingly
+              country: isPercentage ? prevCounts.country : Math.ceil(current + increment), // Update accordingly
+              happy: isPercentage ? Math.ceil(current + increment) : prevCounts.happy, // Update accordingly
+            }));
             setTimeout(updateCounter, 40);
           } else {
             counter.innerHTML = isPercentage
@@ -64,10 +71,11 @@ function About() {
               : `+${target}`;
           }
         };
-
+    
         updateCounter();
       });
     }
+    
   }, []);
 
   return (

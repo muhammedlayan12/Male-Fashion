@@ -5,12 +5,24 @@ import styles from "../styles/ProductsHomePage.module.css";
 import Image from "next/image";
 import json from "../json/homepageproducts.json";
 
+// Define the Product interface to match your JSON structure
+interface Product {
+    name: string;
+    image: string;
+    price: number;
+    rating: string; // Includes HTML for star ratings
+    new?: string; // Optional
+    hot?: string; // Optional
+    colors: string[];
+    description: string;
+}
+
 function ProductsHomePage() {
-    const [activeFilter, setActiveFilter] = useState('Best Sellers');
-    const [isFading, setIsFading] = useState(false);
-    const [isPopupVisible, setPopupVisible] = useState(false);
-    const [isOrderPopupVisible, setOrderPopupVisible] = useState(false); // State for order popup
-    const [selectedProduct, setSelectedProduct] = useState<any>(null);
+    const [activeFilter, setActiveFilter] = useState<string>('Best Sellers');
+    const [isFading, setIsFading] = useState<boolean>(false);
+    const [isPopupVisible, setPopupVisible] = useState<boolean>(false);
+    const [isOrderPopupVisible, setOrderPopupVisible] = useState<boolean>(false);
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
     const handleActiveFilter = (filter: string) => {
         if (filter !== activeFilter) {
@@ -22,7 +34,7 @@ function ProductsHomePage() {
         }
     };
 
-    const openPopup = (product: any) => {
+    const openPopup = (product: Product) => {
         setSelectedProduct(product);
         setPopupVisible(true);
     };
@@ -33,12 +45,12 @@ function ProductsHomePage() {
     };
 
     const openPlaceOrder = () => {
-        closePopup(); // Close the product popup
-        setOrderPopupVisible(true); // Open the order confirmation popup
+        closePopup();
+        setOrderPopupVisible(true);
     };
 
     const closeOrderPopup = () => {
-        setOrderPopupVisible(false); // Close the order confirmation popup
+        setOrderPopupVisible(false);
     };
 
     return (
@@ -72,7 +84,7 @@ function ProductsHomePage() {
                     id='products'
                 >
                     {json
-                        .filter(product => {
+                        .filter((product: Product) => {
                             if (activeFilter === "Hot Sale") {
                                 return product.hot;
                             }
@@ -81,7 +93,7 @@ function ProductsHomePage() {
                             }
                             return true;
                         })
-                        .map((product, index) => (
+                        .map((product: Product, index: number) => (
                             <div key={index} className={styles.product}>
                                 <Image 
                                     src={product.image} 
@@ -106,10 +118,10 @@ function ProductsHomePage() {
                                     <div dangerouslySetInnerHTML={{ __html: product.rating }} />
                                     <p>${product.price}</p>
                                     {product.new && (
-                                        <span className={styles.new}>New</span>
+                                        <span className={styles.new} dangerouslySetInnerHTML={{ __html: product.new }} />
                                     )}
                                     {product.hot && (
-                                        <span className={styles.hot}>Hot</span>
+                                        <span className={styles.hot} dangerouslySetInnerHTML={{ __html: product.hot }} />
                                     )}
                                 </div>
                             </div>
@@ -142,13 +154,12 @@ function ProductsHomePage() {
                 </div>
             )}
 
-            {/* Order Confirmation Popup */}
             {isOrderPopupVisible && (
                 <div className={`${styles.modalContainer} order-popup`} id="order-popup">
                     <section className={styles.orderPopup}>
                         <div className={styles.cut} onClick={closeOrderPopup}>&times;</div>
                         <div className={styles.content}>
-                            <h3>YOUR ORDER HAVE BEEN PLACED</h3>
+                            <h3>YOUR ORDER HAS BEEN PLACED</h3>
                             <p>Thank you for purchasing! Your order has been placed.</p>
                             <button onClick={closeOrderPopup}>Close</button>
                         </div>
