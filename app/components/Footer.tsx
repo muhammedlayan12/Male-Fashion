@@ -1,7 +1,7 @@
 import styles from '../styles/Footer.module.css';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope as faEnvelopeRegular } from '@fortawesome/free-regular-svg-icons';
+// import { faEnvelope as faEnvelopeRegular } from '@fortawesome/free-regular-svg-icons';
 import logo from '../images/footer-logo.png';
 import card1 from "../images/payment.png";
 
@@ -31,7 +31,7 @@ function Footer() {
                     <h3>SUPPORT</h3>
                     <ul>
                         <li>
-                            <FontAwesomeIcon icon={faEnvelopeRegular} /> Contact Us
+                             Contact Us
                         </li>
                         <li><a href="#">Payment Methods</a></li>
                         <li><a href="#">Delivery</a></li>
