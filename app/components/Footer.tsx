@@ -1,6 +1,6 @@
 import styles from '../styles/Footer.module.css';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faEnvelope as faEnvelopeRegular } from '@fortawesome/free-regular-svg-icons';
 import logo from '../images/footer-logo.png';
 import card1 from "../images/payment.png";
