@@ -18,23 +18,11 @@ interface Product {
 }
 
 function Products() {
-    const [activeFilter, setActiveFilter] = useState<string>('Best Sellers');
-    const [isFading, setIsFading] = useState<boolean>(false);
     const [isPopupVisible, setPopupVisible] = useState<boolean>(false);
     const [isOrderPopupVisible, setOrderPopupVisible] = useState<boolean>(false);
-    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Use the Product type
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-    const handleActiveFilter = (filter: string) => {
-        if (filter !== activeFilter) {
-            setIsFading(true);
-            setTimeout(() => {
-                setActiveFilter(filter);
-                setIsFading(false);
-            }, 500);
-        }
-    };
-
-    const openPopup = (product: Product) => { // Use the Product type here
+    const openPopup = (product: Product) => {
         setSelectedProduct(product);
         setPopupVisible(true);
     };
@@ -56,77 +44,40 @@ function Products() {
     return (
         <div>
             <section className={styles.homePageProducts}>
-                <div className={styles.filterOptions}>
-                    <h2 
-                        role="button" 
-                        className={activeFilter === 'Best Sellers' ? styles.active : ''} 
-                        onClick={() => handleActiveFilter("Best Sellers")}
-                    >
-                        Best Sellers
-                    </h2>
-                    <h2 
-                        role="button" 
-                        className={activeFilter === 'New Arrival' ? styles.active : ''} 
-                        onClick={() => handleActiveFilter("New Arrival")}
-                    >
-                        New Arrival
-                    </h2>
-                    <h2 
-                        role="button" 
-                        className={activeFilter === 'Hot Sale' ? styles.active : ''} 
-                        onClick={() => handleActiveFilter("Hot Sale")}
-                    >
-                        Hot Sale
-                    </h2>
-                </div>
-                <div
-                    className={`${styles.products} ${isFading ? styles['fade-out'] : styles['fade-in']}`} 
-                    id='products'
-                >
-                    {json
-                        .filter((product: Product) => {
-                            if (activeFilter === "Hot Sale") {
-                                return product.hot === "true"; // Adjusted to check for string
-                            }
-                            if (activeFilter === "New Arrival") {
-                                return product.new === "true"; // Adjusted to check for string
-                            }
-                            return true;
-                        })
-                        .map((product: Product, index: number) => (
-                            <div key={index} className={styles.product}>
-                                <Image 
-                                    src={product.image} 
-                                    alt={`${product.name} Image`}
-                                    width={250}
-                                    height={250}
-                                    className={styles.productImage}
-                                />
-                                <div className={styles["outline-icon"]}>
-                                    <i className="fa-regular fa-heart"></i>
-                                </div>
-                                <div className={styles.content}>
-                                    <div className={styles.name}>
-                                        <h5>{product.name}</h5>
-                                        <h6 
-                                            className={styles["add-to-cart"]}
-                                            onClick={() => openPopup(product)}
-                                        >
-                                            +Add-To-Cart
-                                        </h6>
-                                    </div>
-                                    <div dangerouslySetInnerHTML={{ __html: product.rating }} />
-                                    <p>${product.price}</p>
-                                    {product.new === "true" && ( // Adjusted to check for string
-                                        <span className={styles.new}>New</span>
-                                    )}
-                                    {product.hot === "true" && ( // Adjusted to check for string
-                                        <span className={styles.hot}>Hot</span>
-                                    )}
-                                </div>
+                <div className={styles.products} id='products'>
+                    {json.map((product: Product, index: number) => (
+                        <div key={index} className={styles.product}>
+                            <Image 
+                                src={product.image} 
+                                alt={`${product.name} Image`}
+                                width={250}
+                                height={250}
+                                className={styles.productImage}
+                            />
+                            <div className={styles["outline-icon"]}>
+                                <i className="fa-regular fa-heart"></i>
                             </div>
-                        ))
-                    }
+                            <div className={styles.content}>
+                                <div className={styles.name}>
+                                    <h5>{product.name}</h5>
+                                    <h6 
+                                        className={styles["add-to-cart"]}
+                                        onClick={() => openPopup(product)}
+                                    >
+                                        +Add-To-Cart
+                                    </h6>
+                                </div>
+                                <div dangerouslySetInnerHTML={{ __html: product.rating }} />
+                                <p>${product.price}</p>
+                                {product.new === "true" && ( 
+                                    <span className={styles.new}>New</span>
+                                )}
+                                {product.hot === "true" && ( 
+                                    <span className={styles.hot}>Hot</span>
+                                )}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </section>
 
@@ -154,7 +105,6 @@ function Products() {
                 </div>
             )}
 
-            {/* Order Confirmation Popup */}
             {isOrderPopupVisible && (
                 <div className={`${styles.modalContainer} order-popup`} id="order-popup">
                     <section className={styles.orderPopup}>
