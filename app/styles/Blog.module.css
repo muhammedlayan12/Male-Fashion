@@ -1,0 +1,265 @@
+.blogSection {
+  text-align: center;
+  background-color: rgb(255, 255, 237);
+  padding: 50px 0;
+  margin-top: 20vmin;
+}
+
+.blogSection span {
+  font-size: 16px;
+  color: red;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.blogSection h1 {
+  font-size: 36px;
+  margin: 10px 0 40px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+
+.blogs {
+  margin-top: 5vmin;
+  display: flex;
+  justify-content: center;
+  gap: 10vmin;
+}
+
+.blog {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 40vmin;
+  height: 350px; /* Fixed height */
+  text-align: left;
+}
+
+.blog:hover {
+  transform: translateY(-10px);
+}
+
+.blog img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog .content {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  text-align: start;
+  height: 135px;
+  width: 250px;
+  padding: 2vmin;
+  top: 75%;
+  left: 12%;
+}
+
+.content span {
+  font-family: 'Poppins', sans-serif;
+  color: #8f8f8f;
+  font-size: 0.8em;
+}
+
+.content span .icon {
+  width: 1em;
+}
+
+.content h3 {
+  margin-top: 1vmin;
+  font-size: 1.1em;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content a {
+  position: relative;
+  padding: 3px 0;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  margin-top: 1vmin;
+  text-decoration: none;
+}
+
+.content a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: black;
+  transition: background-color 0.3s, width 0.3s ease;
+  width: 100%;
+}
+
+.blog:hover .content a::after {
+  background-color: red;
+  width: 50%;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1600px) {
+  .blogs {
+      gap: 7vmin;
+  }
+  .blog {
+      width: 35vmin;
+      height: 350px; /* Maintain fixed height */
+  }
+  .blog .content {
+      top: 65%;
+      left: 7%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .blogs {
+      gap: 4vmin;
+  }
+  .blog {
+      width: 32vmin;
+      height: 350px; /* Maintain fixed height */
+  }
+  .blog .content {
+      top: 60%;
+      left: 3%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .blogs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 100px;
+  }
+  .blog {
+      width: 45vmin;
+      height: 350px; /* Maintain fixed height */
+  }
+  .blog .content {
+      top: 70%;
+      left: 16%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .blogs {
+      gap: 80px;
+      flex-direction: column;
+      align-items: center;
+  }
+  .blog {
+    margin-top:2vmin;
+      width: 50%;
+      height: auto; /* Allow content height to adapt */
+  }
+  .blog .content {
+      top: 75%;
+      left: 16.5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blogs {
+      gap: 60px;
+      flex-direction: column;
+      align-items: center;
+  }
+  .blog {
+      width: 60%;
+      height: auto; /* Allow content height to adapt */
+  }
+  .blog .content {
+      top: 70%;
+      left: 14%;
+  }
+}
+
+/* Media query for screens between 600px and 350px */
+@media screen and (max-width: 600px) and (min-width: 350px) {
+  .blogs {
+      gap: 40px; /* Adjust the gap between blog items */
+      flex-direction: column; /* Stack blog items vertically */
+      align-items: center; /* Center-align blog items */
+  }
+
+  .blog {
+      width: 75%; /* Adjust width for smaller screens */
+      height: auto; /* Allow adaptive height */
+  }
+
+  .blog .content {
+      top: 72%; /* Adjust content positioning */
+      left: 8%; /* Align content with respect to smaller screen size */
+      width: 85%; /* Make content wider for smaller screens */
+      padding: 3vmin; /* Provide comfortable padding */
+  }
+
+  .blog .content h3 {
+      font-size: 1em; /* Adjust heading size for readability */
+      margin-top: 1vmin;
+  }
+
+  .blog .content span {
+      font-size: 0.8em; /* Adjust span font size */
+  }
+
+  .content a {
+      font-size: 0.75em; /* Adjust link size */
+      margin-top: 1vmin;
+  }
+
+  .content a::after {
+      height: 1.5px; /* Adjust underline thickness */
+      bottom: -4px; /* Fine-tune spacing between text and underline */
+  }
+}
+
+
+/* For screens 350px and below */
+@media screen and (max-width: 350px) {
+  .blogs {
+    gap: 30px; /* Adjust gap for smaller screens */
+      flex-direction: column; /* Stack blog items vertically */
+      align-items: center; /* Center align blog items */
+  }
+
+  .blog {
+      width: 80%; /* Reduce width for better fit */
+      height: auto; /* Allow auto height */
+  }
+
+  .blog .content {
+      top: 72%; /* Adjust content positioning for smaller screens */
+      left: 5%; /* Keep content centered with small left offset */
+      width: 90%; /* Expand content width to fit the smaller screen */
+      padding: 3vmin; /* Increase padding for better spacing */
+  }
+
+  .blog .content h3 {
+      font-size: 1em; /* Slightly smaller heading size */
+  }
+
+  .blog .content span {
+      font-size: 0.75em; /* Adjust text size for span elements */
+  }
+
+  .content a {
+      font-size: 0.7em; /* Smaller text for links */
+  }
+
+  .content a::after {
+      height: 1px; /* Thinner underline */
+      bottom: -3px; /* Reduce gap between link and underline */
+  }
+}

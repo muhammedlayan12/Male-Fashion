@@ -1,0 +1,288 @@
+
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;  
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+}
+
+
+/*.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;  
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+}
+*/
+
+
+.navbar .name img{
+    width: 180px;
+}
+
+
+    .navbar  ul{
+        display: flex;
+        list-style-type: none;
+    }
+
+    .navbar ul li{
+        margin: 1.5vmin;
+        font-weight:400;
+    }
+    .navbar ul li a {
+        color: black;
+        text-decoration: none;
+        position: relative; /* Required for positioning the pseudo-element */
+    }
+    
+    .navbar ul li a::after {
+        content: ""; /* Create an empty pseudo-element */
+        display: block;
+        width: 100%; /* Full width */
+        height: 2px; /* Underline thickness */
+        background-color: red; /* Underline color */
+        position: absolute; /* Position relative to the anchor */
+        left: 0;
+        bottom: -4px; /* Position the underline below the text */
+        transform: scaleX(0); /* Initial scale to 0 for hidden effect */
+        transition: transform 0.3s ease; /* Smooth transition */
+    }
+    
+    .navbar ul li a:hover::after {
+        transform: scaleX(1); /* Scale to 1 on hover to show underline */
+    }
+    
+
+
+.navbar .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.navbar .icons i{
+    margin: 1.5vmin;
+}
+
+
+
+
+.navbar .humburger {
+    display: none;
+    font-weight: bolder;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.navbar .sideMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px black;
+    height: 100%;
+    z-index: 1000;
+    /* Initially hidden with transform and opacity */
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.navbar .cut {
+    position: absolute;
+    font-size: 2em;
+    top: 3%;
+    right: 4%;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+}
+.navbar .sideMenu ul {
+    left: 13%;
+    top: 22%;
+    position: absolute;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.navbar .sideMenu ul li {
+    margin: 5vmin;
+}
+
+.navbar .sideMenu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 410;
+    transition: text-decoration 0.3s; /* Optional: Adds a smooth transition effect */
+}
+
+.navbar .sideMenu ul li a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    text-decoration-color: red; /* Changes underline color to red */
+}
+
+
+.navbar .sideMenu.active {
+    /* Menu will slide in and become visible */
+    transform: translateX(0%);
+    opacity: 1;
+    display: block;
+}
+
+.navbar .cart {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden; /* Initially hidden */
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease; /* Add visibility to the transition */
+    position: fixed;
+    top: 0;
+    color: white;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 240px;
+    box-shadow: 0px 0px 8px black;
+}
+
+.navbar .cart.active {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible; /* Make it visible when active */
+}
+
+.cart .cut{
+    position: absolute;
+    top: 8px;
+    right: 18px;
+    color: white;
+}
+
+.cart h2{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 8%;
+    left: 6%;
+    font-weight: bold;
+    font-family: 'Poppins',sans-serif;
+
+}
+
+
+/*responsive design*/
+@media screen and (max-width:1400px) {
+    .navbar{
+        font-size: 1em;
+    }
+    .navbar .name img{
+        width: 160px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .navbar .name img{
+        width: 145px;
+    }
+
+}
+
+
+
+@media screen and (max-width:800px) {
+    .navbar .navigation{
+        display: none;
+    }
+
+    .navbar .humburger{
+        font-size: 1.5em;
+        display: block;
+    }
+    .navbar .name img{
+        width: 180px;
+    }
+    
+    .navbar .icons i{
+        font-size: 1.3em;
+    }
+}
+
+
+@media screen and (max-width:650px) {
+    .navbar{
+        justify-content: center;
+        gap: 16vmin;
+        margin-top: 2vmin;
+    }
+    .navbar .humburger{
+        font-size: 1.5em;
+        display: block;
+    }
+    .navbar .name img{
+        width: 180px;
+    }
+    
+    .navbar .icons i{
+        font-size: 1.3em;
+    }       
+    
+}
+
+
+
+
+
+@media screen and (max-width:500px) {
+    .navbar{
+        justify-content: center;
+        gap: 12vmin;
+        margin-top: 2vmin;
+    }
+    .navbar .humburger{
+        font-size: 1.4em;
+        display: block;
+    }
+    .navbar .name img{
+        width: 150px;
+    }
+    
+    .navbar .icons i{
+        font-size: 1.15em;
+    }       
+    
+}
+
+
+@media screen and (max-width:300px) {
+    .navbar{
+        justify-content: center;
+        gap: 9vmin;
+        margin-top: 2vmin;
+    }
+    .navbar .humburger{
+        font-size: 1.1em;
+        display: block;
+    }
+    .navbar .name img{
+        width: 110px;
+    }
+    
+    .navbar .icons i{
+        font-size: 1em;
+    }       
+    
+}

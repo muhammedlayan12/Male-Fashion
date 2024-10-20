@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Leather Backpack",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-1.jpg",
+        "price": 100,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "new": "<span className={styles.new}>New</span>",
+        "colors": ["#1C1C1C", "#D2691E", "#FFFFFF"],
+        "description": "A stylish and durable leather backpack, perfect for daily use or weekend trips."
+    },
+    {
+        "name": "Canvas Tote Bag",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-2.jpg",
+        "price": 50,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "hot": "<span className={styles.hot}>Hot</span>",
+        "colors": ["#A0522D", "#D3D3D3", "#FFFFFF"],
+        "description": "A versatile canvas tote bag, ideal for carrying your essentials in style."
+    },
+    {
+        "name": "Sports Watch",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-3.jpg",
+        "price": 120,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "colors": ["#1C1C1C", "#FFD700", "#B22222"],
+        "description": "A modern sports watch with a sleek design and excellent functionality for active lifestyles."
+    },
+    {
+        "name": "Sneakers",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-4.jpg",
+        "price": 75,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "new": "<span className={styles.new}>New</span>",
+        "colors": ["#FF6347", "#1C1C1C", "#4682B4"],
+        "description": "Comfortable and stylish sneakers, perfect for casual outings or sports activities."
+    },
+    {
+        "name": "Wool Scarf",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-5.jpg",
+        "price": 30,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "hot": "<span className={styles.hot}>Hot</span>",
+        "colors": ["#FFFFFF", "#808080", "#778899"],
+        "description": "A soft and cozy wool scarf to keep you warm while looking fashionable."
+    },
+    {
+        "name": "Denim Jacket",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-6.jpg",
+        "price": 80,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "new": "<span className={styles.new}>New</span>",
+        "colors": ["#4682B4", "#1C1C1C", "#F5F5F5"],
+        "description": "A classic denim jacket with a modern fit, perfect for layering in any season."
+    },
+    {
+        "name": "Stylish Sunglasses",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-7.jpg",
+        "price": 60,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "colors": ["#1C1C1C", "#A52A2A", "#D2691E"],
+        "description": "Sleek and fashionable sunglasses that offer UV protection with a bold design."
+    },
+    {
+        "name": "Running Shoes",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-8.jpg",
+        "price": 90,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "hot": "<span className={styles.hot}>Hot</span>",
+        "colors": ["#FF4500", "#1C1C1C", "#FFFFFF"],
+        "description": "High-performance running shoes designed for both comfort and durability."
+    },
+    {
+        "name": "Leather Wallet",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-9.jpg",
+        "price": 40,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "new": "<span className={styles.new}>New</span>",
+        "colors": ["#2F4F4F", "#A0522D", "#DCDCDC"],
+        "description": "A sleek leather wallet with multiple compartments for cards and cash."
+    },
+    {
+        "name": "Trendy Hat",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-10.jpg",
+        "price": 25,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "hot": "<span className={styles.hot}>Hot</span>",
+        "colors": ["#000000", "#FFD700", "#FFFFFF"],
+        "description": "A trendy hat with a classic design, perfect for accessorizing any outfit."
+    },
+    {
+        "name": "Stylish Belt",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-11.jpg",
+        "price": 20,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "new": "<span className={styles.new}>New</span>",
+        "colors": ["#8B4513", "#D3D3D3", "#000000"],
+        "description": "A stylish belt made from high-quality materials, perfect for everyday wear."
+    },
+    {
+        "name": "Classic Dress Shirt",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-12.jpg",
+        "price": 55,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "colors": ["#FFFFFF", "#4682B4", "#DCDCDC"],
+        "description": "A crisp, classic dress shirt for formal occasions or smart-casual looks."
+    }
+]

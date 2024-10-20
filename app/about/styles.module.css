@@ -1,0 +1,927 @@
+/* Default (for larger screens) */
+.breadCrumb {
+  height: 15vmin;
+  width: 100%;
+  background-color: rgb(255, 255, 235);
+  padding: 3vmin 0 3vmin 35vmin;
+}
+
+.breadCrumb .name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+}
+
+.breadCrumb .parent {
+  font-family: 'Poppins', sans-serif;
+}
+
+.parent a {
+  margin-right: 1vmin;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  font-size: 1.1em;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.parent span {
+  margin-left: 1.5vmin;
+  font-size: 0.9em;
+  color: #838383;
+}
+
+/* Media Query for tablets and smaller (width 768px and below) */
+@media (max-width: 768px) {
+  .breadCrumb {
+      height: auto;
+      padding: 3vmin 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .breadCrumb .name {
+      font-size: 1.8em;
+  }
+  .parent a {
+      font-size: 1em;
+  }
+}
+
+/* Media Query for mobile phones (width 480px and below) */
+@media (max-width: 480px) {
+  .breadCrumb {
+    margin-top: 15vmin;
+    margin-bottom: 15vmin;
+      height: auto;
+      padding: 2vmin 0;
+  }
+  .breadCrumb .name {
+      font-size: 1.5em;
+  }
+  .parent a {
+      font-size: 0.9em;
+  }
+  .parent span {
+      font-size: 0.8em;
+  }
+}
+
+
+
+  .aboutUs{
+    margin-top: 10vmin;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+
+  .aboutUs .about1{
+    text-align: center;
+  }
+
+
+  .about1 img{
+    width: 1200px;
+  }
+
+
+  .about1 .contents{
+    display: flex;
+    text-align: start;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+
+  .contents .content{
+    margin: 4vmin;
+  }
+
+
+  .contents .content h3{
+    font-family: 'Nunito Sans',sans-serif;
+    font-weight: bolder;
+    font-size: 1.7em;
+    color: black;
+  }
+
+
+  .contents .content span{
+    color: #838383;
+    font-size: 0.8em;
+    font-family: 'Poppins',sans-serif;
+
+  }
+
+
+
+
+  .aboutUs .about2{
+    margin-top: 10vmin;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    text-align: center;
+    gap: 10vmin;
+    align-items: center;
+    align-content: center;
+  }
+
+  .about2 img{
+    width: 800px;
+    height: auto;
+  }
+
+
+  .about2 span{
+    color: red;
+    font-size: 4em;
+  }
+
+
+  .about2 h6{
+    color: #838383;
+    font-size: 0.9em;
+    font-family: 'Nunito Sans',sans-serif;
+  }
+
+
+
+  .about2 .profile{
+    display: flex;
+    justify-content: center;
+    margin-top: 3vmin;
+  }
+
+
+  .profile img{
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    border-radius: 1px solid black;
+  }
+
+
+  .profile .content{
+    margin-left: 2vmin;
+  }
+
+
+  .profile .content h4{
+    font-size: 1.1em;
+    color-scheme: black;
+    font-family: 'Nunito Sans',sans-serif;
+    font-weight: 600;
+  }
+
+
+  .profile .content span{
+    color: #838383;
+    font-size: 0.9em;
+    font-family: 'Poppins',sans-serif;
+  }
+
+
+  .aboutUs .about3{
+    margin: auto;
+    margin-top: 15vmin;
+    align-items: center;
+    align-content: center;
+  }
+
+
+  .about3 .ourNumber{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    margin: auto;
+    gap: 15vmin;
+  }
+
+
+
+  .ourNumber .Number{
+    align-items: center;
+    align-content: center;
+  }
+
+
+  .Number h3{
+    font-size: 3em;
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+  }
+
+
+  .Number span{
+    font-family: 'Nunito Sans',sans-serif;
+    color: #838383;
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+
+
+  .aboutUs .about4{
+    margin: auto;
+    text-align: center;
+    margin-top: 15vmin;
+  }
+
+
+  .about4 span{
+    color: red;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.2em;
+    font-family: 'Nunito Sans',sans-serif;
+    font-weight: 600;
+  }
+
+
+  .about4 h3{
+    margin-top: 2vmin;
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+
+
+
+
+  .about4 .ourMember{
+    margin-top: 5vmin;
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap: 8vmin;
+  }
+
+
+  .ourMember img{
+    width: 200px;
+    height: auto;
+  }
+
+  .ourMember .content{
+    margin-top: 1.5vmin;
+    text-align: start;
+  }
+
+
+  .ourMember .content h4{
+    font-family: 'Nunito Sans',sans-serif;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.4em;
+    }
+
+
+    .ourMember .content span{
+      color: #a5a5a5;
+      font-size: 0.8em;
+      letter-spacing: 0.1em;
+    }
+
+
+
+
+
+    .aboutUs .about5{
+      margin: auto;
+      margin-top: 15vmin;
+      text-align: center;
+    }
+
+
+    .about5 span{
+      color: red;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      letter-spacing: 0.2em;
+      font-family: 'Nunito Sans',sans-serif;
+      font-weight: 600;
+    }
+
+
+    .about5 h4{
+      margin-top: 2vmin;
+      color: black;
+      font-family: 'Poppins',sans-serif;
+      font-size: 2em;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+    }
+
+
+
+    .about5 .ourClient{
+      display: grid;
+      margin-top: 10vmin;
+      grid-template-columns: repeat(4,1fr);
+      align-items: center;
+      gap: 18vmin;
+      align-self: center;
+    }
+
+
+    .ourClient .client{
+      display: flex;
+      flex-direction: column;
+      gap: 8vmin;
+    }
+
+    .ourClient .client img{
+      width: 75px;
+      height: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+
+
+
+
+
+    @media screen and (max-width:1400px) {
+      .about1 img{
+        width: 1000px;
+        height: auto;
+      }    
+      .contents .content{
+        margin: 2.5vmin;
+      }
+
+      .contents .content h3{
+        font-size: 1.5em;
+      }
+
+
+      .contents .content span{
+        font-size: 0.7em;
+      }
+    }
+
+
+
+
+
+
+    
+
+    @media screen and (max-width:1200px) {
+      .about1 img{
+        width: 900px;
+        height: auto;
+      }    
+      .contents .content{
+        margin: 2vmin;
+      }
+
+      .contents .content h3{
+        font-size: 1.4em;
+      }
+
+
+      .contents .content span{
+        font-size: 0.65em;
+      }
+    }
+
+
+
+    
+
+    @media screen and (max-width:1000px) {
+      .about1 img{
+        width: 700px;
+        height: auto;
+      }    
+      .contents .content{
+        margin: 2vmin;
+      }
+
+      .contents .content h3{
+        font-size: 1.4em;
+      }
+
+
+      .contents .content span{
+        font-size: 0.65em;
+      }
+    }
+
+
+
+
+    
+    
+
+    @media screen and (max-width:800px) {
+      .about1 img{
+        width: 550px;
+        height: auto;
+      }    
+      .contents .content h3{
+        font-size: 1.2em;
+      }
+
+
+      .contents .content span{
+        font-size: 0.65em;
+      }
+    }
+
+
+
+    @media screen and (max-width:600px) {
+      .about1 img{
+        width: 400px;
+        height: auto;
+      }    
+      .contents .content h3{
+        font-size: 1em;
+      }
+
+
+      .contents .content span{
+        font-size: 0.6em;
+      }
+    }
+
+
+    @media screen and (max-width:450px) {
+      .about1 img{
+        width: 250px;
+        height: auto;
+      }    
+      .contents .content h3{
+        font-size: 0.9em;
+      }
+
+
+      .contents .content span{
+        font-size: 0.5em;
+      }
+    }
+
+
+
+
+    @media screen and (max-width:1400px) {
+      .aboutUs .about2{
+        gap: 5vmin;
+      }
+
+      .about2 img{
+        width: 600px;
+        height: auto;
+      }
+
+      .about2 span{
+        font-size: 3.5em;
+      }
+
+      .about2 h6{
+        font-size: 0.8em;
+      }
+
+      .profile img{
+        width: auto;
+        height: auto;
+      }
+
+      .profile .content h4{
+        font-size: 1em;
+      }
+
+      .profile .content span{
+        font-size: 0.8em;
+      }
+
+      
+    }
+
+
+
+    @media screen and (max-width:1200px) {
+      .aboutUs .about2{
+        gap: 3vmin;
+      }
+
+      .about2 img{
+        width: 500px;
+        height: auto;
+      }
+
+      .about2 span{
+        font-size: 2.8em;
+      }
+
+      .about2 h6{
+        font-size: 0.7em;
+      }
+
+      .profile img{
+        width: auto;
+        height: auto;
+      }
+
+      .profile .content h4{
+        font-size: 0.9em;
+      }
+
+      .profile .content span{
+        font-size: 0.75em;
+      }
+
+      
+    }
+
+
+
+
+
+    
+
+
+    @media screen and (max-width:950px) {
+      .aboutUs .about2{
+        gap: 1.5vmin;
+      }
+
+      .about2 img{
+        width: 400px;
+        height: auto;
+      }
+
+      .about2 span{
+        font-size: 2.6em;
+      }
+
+      .about2 h6{
+        font-size: 0.6em;
+      }
+
+      .profile img{
+        width: auto;
+        height: auto;
+      }
+
+      .profile .content h4{
+        font-size: 0.8em;
+      }
+
+      .profile .content span{
+        font-size: 0.7em;
+      }
+
+      
+    }
+
+
+
+
+    
+
+    @media screen and (max-width:750px) {
+      .aboutUs .about2{
+        flex-direction: column;
+      }
+
+      .about2 img{
+        width: 450px;
+        height: auto;
+      }
+
+      .about2 span{
+        font-size: 2.8em;
+      }
+
+      .about2 h6{
+        font-size: 0.7em;
+      }
+
+      .profile img{
+        width: auto;
+        height: auto;
+      }
+
+      .profile .content h4{
+        font-size: 1em;
+      }
+
+      .profile .content span{
+        font-size: 0.9em;
+      }
+
+
+    }
+
+
+
+
+
+
+    
+    @media screen and (max-width:500px) {
+      .aboutUs .about2{
+        flex-direction: column;
+      }
+
+      .about2 img{
+        width: 250px;
+        height: auto;
+      }
+
+      .about2 span{
+        font-size: 2em;
+      }
+
+      .about2 h6{
+        font-size: 0.5em;
+      }
+
+      .profile img{
+        width: auto;
+        height: auto;
+      }
+
+      .profile .content h4{
+        font-size: 0.8em;
+      }
+
+      .profile .content span{
+        font-size: 0.8em;
+      }
+
+      
+    }
+
+
+
+
+
+    @media screen and (max-width:1200px) {
+      .about3 .ourNumber{
+        gap: 10vmin;
+      }
+
+      .Number h3{
+        font-size: 2.7em;
+      }
+
+      .Number span{
+        font-size: 0.8em;
+      }
+    }
+
+
+
+
+
+
+
+    
+    @media screen and (max-width:800px) {
+      .about3 .ourNumber{
+        gap: 8vmin;
+      }
+
+      .Number h3{
+        font-size: 2.5em;
+      }
+
+      .Number span{
+        font-size: 0.7em;
+      }
+    }
+
+
+
+
+
+
+     
+    @media screen and (max-width:700px) {
+      .about3 .ourNumber{
+        gap: 12vmin;
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .Number h3{
+        font-size: 2.5em;
+      }
+
+      .Number span{
+        font-size: 0.7em;
+      }
+    }
+
+
+
+
+    @media screen and (max-width:400px) {
+      .about3 .ourNumber{
+        gap: 12vmin;
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .Number h3{
+        font-size: 2.1em;
+      }
+
+      .Number span{
+        font-size: 0.6em;
+      }
+    }
+
+
+
+    @media screen and (max-width:1100px) {
+      .about4 span{
+        font-size: 0.8em;
+      }
+
+      .about4 h3{
+        font-size: 1.8em;
+      }
+
+      .about4 .ourMember{
+        gap: 5vmin;
+      }
+
+      .ourMember img{
+        width: 150px;
+      }
+
+      .ourMember .content h4{
+        font-size: 1.2em;
+      }
+    }
+
+
+
+
+
+    
+    @media screen and (max-width:850px) {
+      .about4 .ourMember{
+        grid-template-columns: repeat(2,1fr);
+        gap: 12vmin;
+      }
+      .about4 span{
+        font-size: 0.7em;
+      }
+
+      .about4 h3{
+        font-size: 1.5em;
+      }
+      .ourMember .content{
+        text-align: center;
+      }
+
+      .about4 .ourMember{
+        gap: 5vmin;
+      }
+
+      .ourMember img{
+        width: 150px;
+      }
+
+      .ourMember .content h4{
+        font-size: 1.2em;
+      }
+    }
+    
+
+
+
+
+
+    
+    
+    @media screen and (max-width:450px) {
+      .about4 .ourMember{
+        grid-template-columns: repeat(1,1fr);
+        gap: 12vmin;
+      }
+      .about4 span{
+        font-size: 0.6em;
+      }
+
+      .about4 h3{
+        font-size: 1.2em;
+      }
+      .ourMember .content{
+        text-align: center;
+      }
+
+      .about4 .ourMember{
+        gap: 5vmin;
+      }
+
+      .ourMember img{
+        width: 150px;
+      }
+
+      .ourMember .content h4{
+        font-size: 1.2em;
+      }
+    }
+    
+
+
+
+
+
+@media screen and (max-width:1000px) {
+  .about5 span{
+    font-size: 0.8em;
+  }
+
+  .about5 h4{
+    font-size: 1.8em;
+  }
+
+  .about5 .ourClient{
+    gap: 15vmin;
+  }
+
+  .ourClient .client{
+    gap: 6vmin;
+  }
+}
+
+
+
+
+
+@media screen and (max-width:850px) {
+  .about5 span{
+    font-size: 0.8em;
+  }
+
+  .about5 h4{
+    font-size: 1.5em;
+  }
+
+  .about5 .ourClient{
+    grid-template-columns: repeat(2,1fr);
+    gap: 15vmin;
+  }
+
+  .ourClient .client{
+    gap: 6vmin;
+  }
+}
+
+
+
+
+@media screen and (max-width:450px) {
+  .about5 span{
+    font-size: 0.8em;
+  }
+
+  .about5 h4{
+    font-size: 1.2em;
+  }
+
+  .about5 .ourClient{
+    grid-template-columns: repeat(2,1fr);
+    gap: 15vmin;
+  }
+  .ourClient .client img{
+    width: 55px;
+    height: auto;
+  }
+
+
+  .ourClient .client{
+    gap: 6vmin;
+  }
+}

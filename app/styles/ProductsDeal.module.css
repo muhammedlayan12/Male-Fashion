@@ -1,0 +1,255 @@
+/* Base Styles */
+.Deals {
+    margin: auto;
+    background-color: rgb(255, 255, 238);
+    margin-top: 20vmin;
+    justify-content: center;
+    gap: 15vmin;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.Deals .dealsName {
+    font-family: 'Poppins', sans-serif;
+    color: #9f9f9f;
+    margin-bottom: 1vmin;
+}
+
+.dealsName h2 {
+    margin: 4vmin;
+    font-size: 2em;
+}
+
+.Deals .dealImg{
+    position: relative;
+}
+
+.dealImg .tag{
+    text-align: center;
+    background-color: black;
+    padding: 2vmin 3.1vmin 2vmin 3.1vmin;
+    border-radius: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.tag h6{
+    color: white;
+    font-size: 1em;
+    font-family: 'Nunito Sans',sans-serif;
+}
+
+
+.tag span{
+    color: white;
+    font-size: 1.15em;
+    font-weight: 600;
+    font-family: 'Nunito Sans',sans-serif;
+}
+
+.dealsName h2.active {
+    font-size: 2.1em;
+    color: black;
+}
+
+.Deals .content {
+    font-family: 'Poppins', sans-serif;
+}
+
+.content span {
+    color: red;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+.content h1 {
+    font-size: 2.1em;
+    color: black;
+    margin-top: 2vmin;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.content .countdown {
+    margin-top: 2vmin;
+    text-align: center;
+    display: flex;
+    gap: 2vmin;
+}
+
+
+
+.countdown .cdItem span {
+    font-size: 2em;
+    color: black;
+}
+
+.countdown h6 {
+    color: black;
+    font-size: 2em;
+}
+
+.cdItem p {
+    font-size: 0.8em;
+    color: #737373;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content button {
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 1.1em;
+    padding: 1.1vmin 3.8vmin;
+    transition: all 0.5s ease;
+}
+
+.content button:hover {
+    color: black;
+    background: none;
+    border: 1px solid black;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For screens up to 1400px */
+@media (max-width: 1400px) {
+    .Deals {
+        gap: 7vmin; /* Reduce gap */
+    }
+
+    .dealsName h2 {
+        font-size: 1.7em; /* Slightly smaller heading size */
+    }
+
+    .content h1 {
+        font-size: 1.8em; /* Slightly smaller heading size */
+    }
+
+    .countdown .cdItem span {
+        font-size: 1.6em; /* Slightly smaller countdown size */
+    }
+
+    .Deals .dealImg img{
+        width: 350px;
+        height: auto;
+    }
+    .countdown h6 {
+        font-size: 1.6em; /* Slightly smaller h6 size */
+    }
+
+    .content button {
+        font-size: 1em; /* Smaller button size */
+        padding: 0.9vmin 3.5vmin; /* Adjust padding */
+    }
+}
+
+/* For screens up to 1200px */
+@media (max-width: 1200px) {
+    .Deals {
+        gap: 4vmin; /* Further reduce gap */
+       
+    }
+
+    .dealsName h2 {
+        font-size: 1.5em; /* Smaller heading size */
+    }
+
+    .dealsName h2.active {
+        font-size: 1.7em; /* Smaller heading size */
+    }
+
+    .content h1 {
+        font-size: 1.6em; /* Smaller heading size */
+    }
+
+    .content span {
+        font-size: 10px; /* Adjust font size */
+    }
+
+    .countdown .cdItem span {
+        font-size: 1.4em; /* Smaller countdown size */
+    }
+
+    .Deals .dealImg img{
+        width: 280px;
+        height: auto;
+    }
+    .countdown h6 {
+        font-size: 1.4em; /* Smaller h6 size */
+    }
+
+    .content button {
+        font-size: 0.9em; /* Smaller button size */
+        padding: 0.7vmin 3vmin; /* Adjust padding */
+    }
+}
+
+/* For tablets and small devices (max-width: 900px) */
+@media (max-width: 900px) {
+    .Deals {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 8vmin; /* Reduce gap */
+        text-align: center;
+    }
+
+    .dealsName h2 {
+        font-size: 1.8em; /* Smaller heading size */
+    }
+
+    .content h1 {
+        font-size: 1.8em; /* Smaller heading size */
+    }
+
+    .countdown .cdItem span {
+        font-size: 1.5em; /* Smaller countdown size */
+    }
+
+    .countdown h6 {
+        font-size: 1.5em; /* Smaller h6 size */
+    }
+
+    .content button {
+        font-size: 1em; /* Smaller button size */
+        padding: 0.8vmin 3vmin; /* Adjust padding */
+    }
+}
+
+/* For mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+    .Deals {
+        margin-top: 10vmin; /* Adjust top margin */
+        gap: 5vmin; /* Further reduce gap */
+    }
+
+    .dealsName h2 {
+        font-size: 1.5em; /* Smaller heading size */
+    }
+
+    .content h1 {
+        font-size: 1.5em; /* Smaller heading size */
+    }
+
+    .content span {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .countdown .cdItem span {
+        font-size: 1.2em; /* Smaller countdown size */
+    }
+
+    .countdown h6 {
+        font-size: 1.2em; /* Smaller h6 size */
+    }
+
+    .content button {
+        font-size: 0.9em; /* Smaller button size */
+        padding: 0.6vmin 2.5vmin; /* Adjust padding */
+    }
+}

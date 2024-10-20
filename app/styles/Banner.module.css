@@ -1,0 +1,131 @@
+.banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%; /* Set a width for the banner */
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 10vmin auto; /* Center the banner horizontally */
+  gap:5vmin;
+  justify-items: center; /* Center items in the grid */
+}
+
+.banner .product {
+  width: 100%; /* Allow the product to take full width of the grid cell */
+  height: 35vmin; /* Keep the height for visual consistency */
+  position: relative;
+  overflow: hidden; /* Ensure the content doesn't overflow */
+  transition: transform 0.5s ease, background-color 0.5s ease; /* Smooth transition for scaling and background color */
+}
+
+.banner .product:hover {
+  transform: scale(1.1);
+}
+
+.banner .product:hover .shop-now {
+  opacity: 1; /* Make "Shop Now" visible on hover */
+}
+
+.banner .product:hover img {
+  filter: brightness(70%); /* Darken the image on hover */
+  transition: filter 0.5s ease; /* Smooth transition for filter effect */
+}
+
+.banner .shop-now {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  text-decoration: none; /* Remove default underline */
+  position: absolute; /* Positioning for the overlay */
+  bottom: -30px; /* Start off-screen */
+  left: 10px; /* Adjust as needed */
+  padding: 5vmin 2vmin; /* Add some padding */
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  color: white; /* Text color */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+  z-index: 2; /* Ensure it appears above other content */
+  transform: translateY(30px); /* Move it down initially */
+  border-bottom: 2px solid white; /* Custom underline */
+  padding-bottom: 5px; /* Space between text and underline */
+}
+
+.banner .product:hover .shop-now {
+  bottom: 5vmin; /* Move it up on hover */
+  opacity: 1; /* Make "Shop Now" visible on hover */
+  transform: translateY(0); /* Slide in from below */
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease; /* Optional: smooth transition for image scaling */
+}
+
+.banner .content {
+  position: absolute;
+  top: 3vmin;
+  left: 3vmin;
+}
+
+.banner .content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  color: black;
+  font-size: 1.7em;
+  transition: color 0.5s ease; /* Optional: smooth transition for color changes */
+}
+
+.banner .content span {
+  color: #6e6e6e;
+  letter-spacing: 0.15em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 1400px) {
+  .banner {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Add a gap for items between 1400px and 1200px */
+  }
+  
+  .banner .product {
+    height: 31vmin; /* Adjust height if needed */
+  }
+
+  .banner .shop-now {
+    font-size: 0.9em;
+  }
+
+  .banner .content {
+    position: absolute;
+    top: 3vmin;
+    left: 3vmin;
+  }
+
+  .banner .content h2 {
+    font-size: 1.5em;
+  }
+
+  .banner .content span {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .banner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10vmin; /* Add a gap for two-column layout */
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-area: 7vmin;
+  }
+
+  .banner .product {
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto; /* Adjust height as needed */
+  }
+}

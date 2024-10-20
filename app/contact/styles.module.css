@@ -1,0 +1,219 @@
+
+.breadCrumb {
+    height: 15vmin;
+    width: 100%;
+    background-color: rgb(255, 255, 235);
+    padding: 3vmin 0 3vmin 35vmin;
+  }
+  
+  .breadCrumb .name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .breadCrumb .parent {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .parent a {
+    margin-right: 1vmin;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    font-size: 1.1em;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  .parent span {
+    margin-left: 1.5vmin;
+    font-size: 0.9em;
+    color: #838383;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .breadCrumb {
+        height: auto;
+        padding: 3vmin 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .breadCrumb .name {
+        font-size: 1.8em;
+    }
+    .parent a {
+        font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .breadCrumb {
+      margin-top: 15vmin;
+      margin-bottom: 15vmin;
+        height: auto;
+        padding: 2vmin 0;
+    }
+    .breadCrumb .name {
+        font-size: 1.5em;
+    }
+    .parent a {
+        font-size: 0.9em;
+    }
+    .parent span {
+        font-size: 0.8em;
+    }
+  }
+  
+  .contactUs {
+    margin-top: 10vmin;
+    text-align: center;
+  }
+  
+  .contactUs .contactSec {
+    margin-top: 10vmin;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10vmin;
+  }
+  
+  .contactSec .contactData {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 3vmin;
+  }
+  
+  .contactData .contact1,
+  .contactData .contact2,
+  .contactData .contact3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1vmin;
+  }
+  
+  .contact1 span {
+    color: red;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .contact1 h2 {
+    margin-top: 1vmin;
+    color: black;
+    font-size: 2.2em;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  .contact1 p,
+  .contact2 p,
+  .contact3 p {
+    color: #838383;
+    font-size: 0.9em;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0.3em;
+  }
+  
+  .contact2 h4,
+  .contact3 h4 {
+    color: black;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .contactSec .form {
+    display: flex;
+    flex-direction: column;
+    gap: 5vmin;
+  }
+  
+  .form .form1 {
+    display: flex;
+    gap: 2vmin;
+  }
+  
+  .form .form1 input,
+  .form .form2 input {
+    padding: 1vmin 4vmin;
+    border: 1px solid black;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    color: #838383;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .form .form2 input {
+    padding: 1vmin 36vmin 17vmin 1vmin;
+  }
+  
+  .contactSec .form button {
+    background-color: #111;
+    color: white;
+    border: none;
+    font-family: "Nunito Sans", sans-serif;
+    padding: 1.5vmin 3vmin;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.5s ease;
+    font-size: 0.9em;
+  }
+  
+  .contactSec .form button:hover {
+    background: none;
+    color: #111;
+    border: 1px solid #111;
+  }
+  
+ 
+
+@media screen and (max-width: 500px) {
+  .contactSec {
+    flex-direction: column;
+    gap: 3vmin;
+    padding-left: 5%;  
+    padding-right: 5%; 
+  }
+
+  .contactData {
+    gap: 2vmin;
+    text-align: center;
+  }
+
+  .contact1 h2,
+  .contact2 h4,
+  .contact3 h4 {
+    font-size: 1.6em;
+  }
+
+  .contact1 p,
+  .contact2 p,
+  .contact3 p {
+    font-size: 0.75em;
+  }
+
+  .form .form1 input,
+  .form .form2 input {
+    width: 100%;  
+    padding: 1vmin;  
+    font-size: 0.6em;  
+  }
+
+  .form .form2 input {
+    padding: 1vmin;
+    height: 10vmin; 
+  }
+ .contactSec .form button {
+    
+    font-size: 0.5em;
+    width: 100%; 
+    padding: 1.5vmin;  
+    font-size: 0.6em;  
+  }
+}

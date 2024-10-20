@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Leather Backpack",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-1.jpg",
+        "price": 100,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "new": "<span className={styles.new}>New</span>",
+        "colors": ["#1C1C1C", "#D2691E", "#FFFFFF"],
+        "description": "Stylish and durable leather backpack perfect for everyday use."
+    },
+    {
+        "name": "Canvas Tote Bag",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-2.jpg",
+        "price": 50,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "hot": "<span className={styles.hot}>Hot</span>",
+        "colors": ["#A0522D", "#D3D3D3", "#FFFFFF"],
+        "description": "A versatile canvas tote bag that's great for shopping or casual outings."
+    },
+    {
+        "name": "Sports Watch",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-3.jpg",
+        "price": 120,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "colors": ["#1C1C1C", "#FFD700", "#B22222"],
+        "description": "Stylish sports watch with durable materials and water resistance."
+    },
+    {
+        "name": "Sneakers",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-4.jpg",
+        "price": 75,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "new": "<span className={styles.new}>New</span>",
+        "colors": ["#FF6347", "#1C1C1C", "#4682B4"],
+        "description": "Comfortable sneakers that offer great support for any activity."
+    },
+    {
+        "name": "Wool Scarf",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-5.jpg",
+        "price": 30,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "hot": "<span className={styles.hot}>Hot</span>",
+        "colors": ["#FFFFFF", "#808080", "#778899"],
+        "description": "Warm wool scarf to keep you cozy during the winter months."
+    },
+    {
+        "name": "Denim Jacket",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-6.jpg",
+        "price": 80,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "new": "<span className={styles.new}>New</span>",
+        "colors": ["#4682B4", "#1C1C1C", "#F5F5F5"],
+        "description": "Classic denim jacket that never goes out of style."
+    },
+    {
+        "name": "Stylish Sunglasses",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-7.jpg",
+        "price": 60,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "colors": ["#1C1C1C", "#A52A2A", "#D2691E"],
+        "description": "Fashionable sunglasses to protect your eyes from the sun."
+    },
+    {
+        "name": "Running Shoes",
+        "image": "https://themewagon.github.io/malefashion/img/product/product-8.jpg",
+        "price": 90,
+        "rating": "<i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i>",
+        "hot": "<span className={styles.hot}>Hot</span>",
+        "colors": ["#FF4500", "#1C1C1C", "#FFFFFF"],
+        "description": "High-performance running shoes designed for comfort and durability."
+    }
+]
